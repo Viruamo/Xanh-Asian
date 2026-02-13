@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liên hệ - Xanh Asian</title>
+  <link rel="icon" href="/images/logocty.svg" type="image/svg+xml" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body class="bg-white">
+  <div id="root"></div>
+  
+  <script type="module">
+    import { Header } from './js/header.js';
+    import { Footer } from './js/footer.js';
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      const root = document.getElementById('root');
+      
+      root.appendChild(Header());
+      
+      // Contact Content
+      const contactSection = document.createElement('section');
+      contactSection.className = 'py-20 bg-gray-900 text-white';
+      contactSection.innerHTML = `
+        <div class="max-w-7xl mx-auto px-4">
+          <h1 class="text-5xl font-bold text-center mb-16">Liên Hệ Với Xanh Asian</h1>
+          <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            <div>
+              <h2 class="text-2xl font-bold mb-8">Thông Tin Liên Hệ</h2>
+              <p class="mb-6 text-lg">📍 <strong>Địa Chỉ:</strong> Tầng 5, Tòa Nhà A, Phố Nguyễn Huệ, Quận Hoàn Kiếm, Hà Nội</p>
+              <p class="mb-6 text-lg">📱 <strong>Điện Thoại:</strong> (+84) 24 3936 1234 / (+84) 90 123 4567</p>
+              <p class="mb-6 text-lg">✉️ <strong>Email:</strong> info@xanhasian.com.vn</p>
+              <p class="mb-6 text-lg">🌐 <strong>Website:</strong> www.xanhasian.com.vn</p>
+              <p class="text-gray-400"><strong>Giờ Làm Việc:</strong> 8:00 AM - 6:00 PM (Thứ 2 - Thứ 6)<br/>8:00 AM - 12:00 PM (Thứ 7)</p>
+              <p class="text-gray-400 mt-4"><strong>Hỗ Trợ Khách Hàng:</strong> 24/7 (Gọi hoặc gửi email)</p>
+            </div>
+            <form class="space-y-4">
+              <input type="text" placeholder="Họ và Tên" class="w-full bg-gray-800 rounded px-4 py-3 text-white placeholder-gray-500" required />
+              <input type="email" placeholder="Email của bạn" class="w-full bg-gray-800 rounded px-4 py-3 text-white placeholder-gray-500" required />
+              <input type="text" placeholder="Công ty / Tổ Chức" class="w-full bg-gray-800 rounded px-4 py-3 text-white placeholder-gray-500" />
+              <input type="text" placeholder="Chủ Đề" class="w-full bg-gray-800 rounded px-4 py-3 text-white placeholder-gray-500" />
+              <textarea placeholder="Tin nhắn của bạn..." rows="4" class="w-full bg-gray-800 rounded px-4 py-3 text-white placeholder-gray-500"></textarea>
+              <button class="w-full bg-green-600 hover:bg-green-700 py-3 rounded text-white font-semibold text-lg transition">Gửi Tin Nhắn</button>
+            </form>
+          </div>
+        </div>
+      `;
+      root.appendChild(contactSection);
+      root.appendChild(Footer());
+    });
+  </script>
+  
+  <!-- Live reload for development -->
+  <script src="/js/live-reload.js"></script>
+</body>
+</html>

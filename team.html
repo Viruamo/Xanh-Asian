@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đội ngũ - Xanh Asian</title>
+  <link rel="icon" href="/images/logocty.svg" type="image/svg+xml" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body class="bg-white">
+  <div id="root"></div>
+  
+  <script type="module">
+    import { Header } from './js/header.js';
+    import { Footer } from './js/footer.js';
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      const root = document.getElementById('root');
+      
+      root.appendChild(Header());
+      
+      // Team Content
+      const teamSection = document.createElement('section');
+      teamSection.className = 'py-20 bg-white';
+      teamSection.innerHTML = `
+        <div class="max-w-7xl mx-auto px-4">
+          <h1 class="text-5xl font-bold text-center mb-16 text-green-900">Đội Ngũ Chuyên Gia</h1>
+          <div class="grid md:grid-cols-4 gap-8">
+            <div class="border-2 border-green-300 p-6 rounded-2xl text-center hover:bg-green-50">
+              <div class="text-6xl mb-4">👨‍💼</div>
+              <h3 class="font-bold mb-1 text-green-900 text-lg">Ông Nguyễn Văn A</h3>
+              <p class="text-sm text-green-600 font-semibold">Tổng Giám Đốc</p>
+              <p class="text-xs text-gray-600 mt-2">25+ năm kinh nghiệm trong lĩnh vực năng lượng</p>
+            </div>
+            <div class="border-2 border-green-300 p-6 rounded-2xl text-center hover:bg-green-50">
+              <div class="text-6xl mb-4">👩‍🔬</div>
+              <h3 class="font-bold mb-1 text-green-900 text-lg">Tiến Sỹ Trần Thị B</h3>
+              <p class="text-sm text-green-600 font-semibold">Giám Đốc Kỹ Thuật</p>
+              <p class="text-xs text-gray-600 mt-2">Chuyên gia về hệ thống năng lượng tái tạo</p>
+            </div>
+            <div class="border-2 border-green-300 p-6 rounded-2xl text-center hover:bg-green-50">
+              <div class="text-6xl mb-4">👨‍🔧</div>
+              <h3 class="font-bold mb-1 text-green-900 text-lg">Lê Văn C</h3>
+              <p class="text-sm text-green-600 font-semibold">Trưởng Bộ Phận Lắp Đặt</p>
+              <p class="text-xs text-gray-600 mt-2">Kinh nghiệm 15 năm trong lắp đặt hệ thống</p>
+            </div>
+            <div class="border-2 border-green-300 p-6 rounded-2xl text-center hover:bg-green-50">
+              <div class="text-6xl mb-4">👩‍💼</div>
+              <h3 class="font-bold mb-1 text-green-900 text-lg">Phạm Thị D</h3>
+              <p class="text-sm text-green-600 font-semibold">Giám Đốc Bán Hàng</p>
+              <p class="text-xs text-gray-600 mt-2">Chuyên gia tư vấn khách hàng doanh nghiệp</p>
+            </div>
+          </div>
+          
+          <div class="mt-20 max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold mb-6 text-center text-green-900">Tại Sao Chọn Xanh Asian?</h2>
+            <ul class="text-lg text-gray-700 space-y-3">
+              <li>✓ <strong>Đội ngũ chuyên gia:</strong> Những chuyên gia hàng đầu với kinh nghiệm 10-25 năm trong lĩnh vực năng lượng xanh</li>
+              <li>✓ <strong>Công nghệ tiên tiến:</strong> Sử dụng những công nghệ mới nhất từ các nhà sản xuất hàng đầu thế giới</li>
+              <li>✓ <strong>Chất lượng đảm bảo:</strong> Tất cả sản phẩm và dịch vụ đạt tiêu chuẩn quốc tế</li>
+              <li>✓ <strong>Tư vấn chuyên nghiệp:</strong> Tư vấn miễn phí giúp bạn chọn giải pháp phù hợp nhất</li>
+              <li>✓ <strong>Hỗ trợ toàn diện:</strong> Hỗ trợ từ thiết kế, lắp đặt đến bảo trì lâu dài</li>
+            </ul>
+          </div>
+        </div>
+      `;
+      root.appendChild(teamSection);
+      root.appendChild(Footer());
+    });
+  </script>
+  
+  <!-- Live reload for development -->
+  <script src="/js/live-reload.js"></script>
+</body>
+</html>

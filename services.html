@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dịch vụ - Xanh Asian</title>
+  <link rel="icon" href="/images/logocty.svg" type="image/svg+xml" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body class="bg-white">
+  <div id="root"></div>
+  
+  <script type="module">
+    import { Header } from './js/header.js';
+    import { Footer } from './js/footer.js';
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      const root = document.getElementById('root');
+      
+      root.appendChild(Header());
+      
+      // Services Content
+      const servicesSection = document.createElement('section');
+      servicesSection.className = 'py-20 bg-gray-50';
+      servicesSection.innerHTML = `
+        <div class="max-w-7xl mx-auto px-4">
+          <h1 class="text-5xl font-bold text-center mb-16 text-green-900">Các Dịch Vụ Chính</h1>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg border-t-4 border-green-500">
+              <div class="text-4xl mb-4">☀️</div>
+              <h3 class="font-bold mb-2 text-green-700 text-xl">Năng Lượng Mặt Trời</h3>
+              <p class="text-gray-600">Thiết kế, cung cấp và lắp đặt hệ thống điện mặt trời (Solar PV) cho nhà máy, công ty và hộ gia đình. Giải pháp tối ưu hóa giảm chi phí điện năng.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg border-t-4 border-green-500">
+              <div class="text-4xl mb-4">💨</div>
+              <h3 class="font-bold mb-2 text-green-700 text-xl">Năng Lượng Gió</h3>
+              <p class="text-gray-600">Lắp đặt tua bin gió và hệ thống năng lượng gió cho các dự án lớn. Đem lại hiệu quả cao tại các khu vực có gió mạnh.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg border-t-4 border-green-500">
+              <div class="text-4xl mb-4">🔋</div>
+              <h3 class="font-bold mb-2 text-green-700 text-xl">Hệ Thống Lưu Trữ Năng Lượng</h3>
+              <p class="text-gray-600">Cung cấp pin và hệ thống lưu trữ năng lượng (Battery Storage) tiên tiến để đảm bảo cung cấp điện 24/7.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg border-t-4 border-green-500">
+              <div class="text-4xl mb-4">📊</div>
+              <h3 class="font-bold mb-2 text-green-700 text-xl">Tư Vấn &amp; Thiết Kế</h3>
+              <p class="text-gray-600">Tư vấn chiến lược năng lượng và thiết kế hệ thống tối ưu phù hợp với nhu cầu và ngân sách của khách hàng.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg border-t-4 border-green-500">
+              <div class="text-4xl mb-4">🔧</div>
+              <h3 class="font-bold mb-2 text-green-700 text-xl">Bảo Trì &amp; Quản Lý</h3>
+              <p class="text-gray-600">Dịch vụ bảo trì định kỳ, sửa chữa và quản lý hệ thống năng lượng để đảm bảo hoạt động tối ưu.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg border-t-4 border-green-500">
+              <div class="text-4xl mb-4">🎓</div>
+              <h3 class="font-bold mb-2 text-green-700 text-xl">Đào Tạo &amp; Hỗ Trợ</h3>
+              <p class="text-gray-600">Cung cấp khóa đào tạo chuyên nghiệp cho nhân viên và hỗ trợ kỹ thuật 24/7 cho tất cả khách hàng.</p>
+            </div>
+          </div>
+        </div>
+      `;
+      root.appendChild(servicesSection);
+      root.appendChild(Footer());
+    });
+  </script>
+  
+  <!-- Live reload for development -->
+  <script src="/js/live-reload.js"></script>
+</body>
+</html>
