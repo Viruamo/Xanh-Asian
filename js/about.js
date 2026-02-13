@@ -13,9 +13,9 @@ export function About() {
         <h2 class="text-3xl font-bold text-center text-gray-800">${t('breakthoughTechnology')}</h2>
       </div>
       
-      <!-- 3 Column Layout -->
-      <div class="grid grid-cols-3 gap-8 bg-white p-8 rounded-lg shadow">
-        
+      <!-- 2 Column Layout: Công Nghệ | Điểm Khác Biệt -->
+      <div class="grid grid-cols-2 gap-8 bg-white p-8 rounded-lg shadow">
+
         <!-- Column 1: Công Nghệ -->
         <div>
           <h3 class="text-sm font-bold text-gray-800 mb-6 pb-3 border-b-2 border-orange-500">${t('breakthoughTechnology')}</h3>
@@ -23,20 +23,8 @@ export function About() {
             <img src="/images/xanh 2.drawio.png" alt="Công Nghệ" class="w-full h-auto" />
           </div>
         </div>
-        
-        <!-- Column 2: Lò Nhiệt Hoá -->
-        <div>
-          <h3 class="text-sm font-bold text-gray-800 mb-6 pb-3 border-b-2 border-orange-500">${t('furnace')}</h3>
-          <ul class="space-y-2 text-sm text-gray-700">
-            <li>• xxx</li>
-            <li>• xxx</li>
-            <li>• xxx</li>
-            <li>• xxx</li>
-            <li>• xxx</li>
-          </ul>
-        </div>
-        
-        <!-- Column 3: Lợi Thế Cạnh Tranh -->
+
+        <!-- Column 2: Điểm Khác Biệt -->
         <div>
           <h3 class="text-sm font-bold text-gray-800 mb-6 pb-3 border-b-2 border-orange-500">${t('differences')}</h3>
           <div class="overflow-x-auto text-xs">
@@ -98,7 +86,7 @@ export function About() {
             </table>
           </div>
         </div>
-        
+
       </div>
     </div>
   `;
