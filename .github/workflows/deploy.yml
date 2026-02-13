@@ -3,51 +3,43 @@ name: Deploy Static Site
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+      - name: Checkout code
+        uses: actions/checkout@v4
       
-      - name: Create dist directory
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      
+      - name: Build site
         run: |
-          mkdir -p dist
-          # Copy HTML files
-          cp *.html dist/ 2>/dev/null || true
-          # Copy CSS
-          cp -r css dist/ 2>/dev/null || true
-          # Copy JS
-          cp -r js dist/ 2>/dev/null || true
-          # Copy Public files (images, etc)
-          cp -r public dist/ 2>/dev/null || true
-          # Copy package.json
-          cp package.json dist/ 2>/dev/null || true
-          # List what was copied
-          echo "Files in dist directory:"
-          ls -la dist/
+          mkdir -p _site
+          cp -v *.html _site/ 2>/dev/null || true
+          cp -rv css _site/ 2>/dev/null || true
+          cp -rv js _site/ 2>/dev/null || true
+          cp -rv public _site/ 2>/dev/null || true
+          cp -v package.json _site/ 2>/dev/null || true
+          echo "Build completed. Contents of _site:"
+          ls -la _site/
       
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: '_site'
       
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
