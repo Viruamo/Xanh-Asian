@@ -1,5 +1,4 @@
 {
   "buildCommand": "mkdir -p dist && cp *.html dist/ 2>/dev/null || true && cp -r css dist/ 2>/dev/null || true && cp -r js dist/ 2>/dev/null || true && cp -r public dist/ 2>/dev/null || true",
-  "outputDirectory": "dist",
-  "framework": "other"
+  "outputDirectory": "dist"
 }
