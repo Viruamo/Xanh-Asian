@@ -4,7 +4,8 @@
   "description": "Xanh Asian - Công nghệ năng lượng xanh",
   "scripts": {
     "start": "python server.py",
-    "dev": "python server.py"
+    "dev": "python server.py",
+    "build": "echo 'Static site - no build needed'"
   },
   "python": {
     "dependencies": [
