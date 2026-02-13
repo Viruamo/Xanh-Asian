@@ -30,7 +30,7 @@ jobs:
           cp -v *.html _site/ 2>/dev/null || true
           cp -rv css _site/ 2>/dev/null || true
           cp -rv js _site/ 2>/dev/null || true
-          cp -rv public _site/ 2>/dev/null || true
+          cp -rv public/* _site/ 2>/dev/null || true
           cp -v package.json _site/ 2>/dev/null || true
           echo "Build completed. Contents of _site:"
           ls -la _site/

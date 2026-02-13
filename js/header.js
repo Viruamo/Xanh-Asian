@@ -10,7 +10,7 @@ export function Header() {
   div.innerHTML = `
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <a href="/" class="flex items-center gap-4 transition">
-        <img src="/images/logocty.svg" alt="Xanh Asian Logo" class="h-24" />
+        <img src="/images/logocty.png" alt="Xanh Asian Logo" class="h-24" />
         <div class="flex flex-col leading-tight">
           <span class="text-3xl font-bold text-green-700">Xanh Asian</span>
           <span class="text-xs font-semibold text-green-600">${t('tagline')}</span>

@@ -17,7 +17,7 @@ export function Benefits() {
         <div class="flex gap-6">
           <div class="flex-shrink-0">
             <div class="flex items-center justify-center h-24 w-24 rounded-full bg-gray-100">
-              <img src="/images/khong khoi.svg" alt="Không khói" class="h-16 w-16" />
+              <img src="/images/khong khoi.png" alt="Không khói" class="h-16 w-16" />
             </div>
           </div>
           <div class="flex-1">
@@ -30,7 +30,7 @@ export function Benefits() {
         <div class="flex gap-6">
           <div class="flex-shrink-0">
             <div class="flex items-center justify-center h-24 w-24 rounded-full bg-gray-100">
-              <img src="/images/không nuoc.svg" alt="Không nước" class="h-16 w-16" />
+              <img src="/images/không nuoc.png" alt="Không nước" class="h-16 w-16" />
             </div>
           </div>
           <div class="flex-1">
@@ -43,7 +43,7 @@ export function Benefits() {
         <div class="flex gap-6">
           <div class="flex-shrink-0">
             <div class="flex items-center justify-center h-24 w-24 rounded-full bg-gray-100">
-              <img src="/images/không tro.svg" alt="Không tro" class="h-16 w-16" />
+              <img src="/images/không tro.png" alt="Không tro" class="h-16 w-16" />
             </div>
           </div>
           <div class="flex-1">

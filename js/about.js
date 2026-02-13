@@ -20,7 +20,7 @@ export function About() {
         <div>
           <h3 class="text-sm font-bold text-gray-800 mb-6 pb-3 border-b-2 border-orange-500">${t('breakthoughTechnology')}</h3>
           <div class="flex justify-center">
-            <img src="/images/xanh 2.drawio.svg" alt="Công Nghệ" class="w-full h-auto" />
+            <img src="/images/xanh 2.drawio.png" alt="Công Nghệ" class="w-full h-auto" />
           </div>
         </div>
         
