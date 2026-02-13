@@ -13,8 +13,8 @@ export function About() {
         <h2 class="text-3xl font-bold text-center text-gray-800">${t('breakthoughTechnology')}</h2>
       </div>
       
-      <!-- 2 Column Layout: Công Nghệ | Điểm Khác Biệt -->
-      <div class="grid grid-cols-2 gap-8 bg-white p-8 rounded-lg shadow">
+      <!-- Responsive layout: stacked on mobile, two columns on md+ -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white p-8 rounded-lg shadow">
 
         <!-- Column 1: Công Nghệ -->
         <div>
